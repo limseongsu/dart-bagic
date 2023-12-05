@@ -19,6 +19,7 @@ void question1(int a, int b) {
   // int greaterNumber = (a > b) ? a : b;
   // print(greaterNumber);
 }
+
 //---------------------------------------------------------------------------------------------------
 void example() {
   List<int> intList = [1, 2, 3, 4, 5];
@@ -88,14 +89,16 @@ class VendingMachine {
 
 //---------------------------------------------------------------------------------------------------
 
-
-
 void main() {
   Cleric cleric = Cleric('example');
   cleric.selfAid();
   int heal = cleric.pray(2);
   print("회복 된 MP 량: ${heal}, MP: ${cleric.mp}");
 }
+
+
+// 현실세계의 성직자 “클레릭" 를 표현하는 클래스 Cleric 를 작성 하시오.
+// 속성이나 동작은 작성 할 필요 없습니다. (내용은 아무것도 작성하지 않아도 됨)
 
 class Cleric {
   String name;
@@ -107,22 +110,22 @@ class Cleric {
   Cleric(this.name);
 
   void selfAid() {
-    if(mp >= 5) {
+    if (mp >= 5) {
       // mp = mp -5;
       mp -= 5;
       hp = maxHp;
       print("체력을 회복하였습니다.");
-    }else {
+    } else {
       print("mp가 모자랍니다.");
     }
   }
 
   int pray(int seconds) {
     int heal = seconds + Random().nextInt(3);
-    if(mp + heal > maxMp) {
+    if (mp + heal > maxMp) {
       heal = maxMp - mp;
       mp = maxMp;
-    }else {
+    } else {
       mp = mp + heal;
     }
     return heal;
