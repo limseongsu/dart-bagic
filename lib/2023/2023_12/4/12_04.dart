@@ -1,5 +1,6 @@
-import 'package:dart_bagic/2023/2023_12/4/wand.dart';
-import 'package:dart_bagic/2023/2023_12/4/wizard.dart';
+
+import '../../../games/wand.dart';
+import '../../../games/wizard.dart';
 
 void main() {
 
